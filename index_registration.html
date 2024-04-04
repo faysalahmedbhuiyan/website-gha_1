@@ -429,6 +429,7 @@ form .page .btns button.next{
 }
 // Make sure all necessary elements are loaded before accessing them
 document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
   // Selecting necessary elements
   const slidePage = document.querySelector(".slide-page");
   const nextBtnFirst = document.querySelector(".firstNext");
@@ -529,6 +530,8 @@ document.addEventListener("DOMContentLoaded", function() {
       progressText[step - 1].classList.add("active");
   }
 });
+});
+
 </script>
 
 </html>
