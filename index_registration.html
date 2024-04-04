@@ -1,0 +1,534 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME | GLOBAL HAPPY ACADEMY</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../GHA_ALL/GHA_INFO/fav icon/New folder/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../GHA_ALL/GHA_INFO/fav icon/New folder/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../GHA_ALL/GHA_INFO/fav icon/New folder/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="../CSS_file/style_register.css">
+    <!--  name icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- https://www.codingnepalweb.com/multi-step-form-html-css-javascript/ -->
+
+</head>
+
+<body>
+  
+
+    <div class="container">
+         <img src="../GHA_INFO/picture/1.png">
+        <header>GLOBAL HAPPY ACADEMY REGISTRATION FORM</header>
+        <div class="progress-bar">
+           <div class="step">
+              <p>
+                 Name
+              </p>
+              <div class="bullet">
+                 <span>1</span>
+              </div>
+              <div class="check fas fa-check"></div>
+           </div>
+           <div class="step">
+              <p>
+                 Contact
+              </p>
+              <div class="bullet">
+                 <span>2</span>
+              </div>
+              <div class="check fas fa-check"></div>
+           </div>
+           <div class="step">
+              <p>
+                 Birth
+              </p>
+              <div class="bullet">
+                 <span>3</span>
+              </div>
+              <div class="check fas fa-check"></div>
+           </div>
+           <div class="step">
+              <p>
+                 Submit
+              </p>
+              <div class="bullet">
+                 <span>4</span>
+              </div>
+              <div class="check fas fa-check"></div>
+           </div>
+        </div>
+        <div class="form-outer">
+           <form action="#">
+              <div class="page slide-page">
+                 <div class="title">
+                    Basic Info:
+                 </div>
+                 <div class="field">
+                    <div class="label">
+                       First Name
+                    </div>
+                    <input type="text" required>
+                 </div>
+                 <div class="field">
+                    <div class="label">
+                       Last Name
+                    </div>
+                    <input type="text" required>
+                 </div>
+                 <div class="field">
+                  <div class="label">
+                     Home Country
+                  </div>
+                  <input type="text" required>
+               </div>
+                 <div class="field">
+                    <button class="firstNext next">Next</button>
+                 </div>
+              </div>
+              <div class="page">
+                 <div class="title">
+                    Contact Info:
+                 </div>
+                 <div class="field">
+                    <div class="label">
+                       Email Address
+                    </div>
+                    <input type="text">
+                 </div>
+                 <div class="field">
+                    <div class="label">
+                       Phone Number
+                    </div>
+                    <input type="Number">
+                 </div>
+                 <div class="field btns">
+                    <button class="prev-1 prev">Previous</button>
+                    <button class="next-1 next">Next</button>
+                 </div>
+              </div>
+              <div class="page">
+                 <div class="title">
+                    Date of Birth:
+                 </div>
+                 <div class="field">
+                    <div class="label">
+                       Date
+                    </div>
+                    <input type="text">
+                 </div>
+                 <div class="field">
+                    <div class="label">
+                       Gender
+                    </div>
+                    <select>
+                       <option>Male</option>
+                       <option>Female</option>
+                       <option>Other</option>
+                    </select>
+                 </div>
+                 <div class="field btns">
+                    <button class="prev-2 prev">Previous</button>
+                    <button class="next-2 next">Next</button>
+                 </div>
+              </div>
+              <div class="page">
+                 <div class="title">
+                  Please join our Whatsapp groups. 
+                 </div>
+                 <a href="https://chat.whatsapp.com/CKsBIrvwO7SFTo1ehu4xN4">CLICK HERE PLEASE! </a>
+                 
+                 <div class="field btns">
+                    <button class="prev-3 prev">Previous</button>
+                    <button class="submit">Submit</button>
+                 </div>
+              </div>
+           </form>
+        </div>
+     </div>
+
+    
+    <script src="../JAVA_GHA/script-register-gha.js"></script>
+</body>
+
+
+</html>
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /*overflow: hidden;*/
+  background: url("bg.png"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+}
+::selection{
+  color: #fff;
+  background: #d43f8d;
+}
+.course-info{
+    width: 330px;
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 30px 35px;
+    margin: 0 auto;
+}
+.container{
+  width: 70%;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 35px 10px 35px;
+  margin: 0 auto;
+}
+.container img{
+  border-radius: 50%;
+  height: 25%;
+  width: 15%;
+}
+.container header{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer form{
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field{
+  width: 330px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+form .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+form .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #d33f8d;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover{
+  background: #000;
+}
+form .page .btns button{
+  margin-top: -20px!important;
+}
+form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.next{
+  margin-left: 3px;
+}
+.container .progress-bar{
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+}
+.container .progress-bar .step{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p{
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active{
+  border-color: #d43f8d;
+  background: #d43f8d;
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -51px;
+  height: 3px;
+  width: 44px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after{
+  background: #d43f8d;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color: #d43f8d;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust container width and padding */
+  .container {
+    width: 90%;
+    padding: 30px 15px 10px 15px;
+  }
+
+  /* Adjust image size */
+  .container img {
+    height: 30%;
+    width: 30%;
+  }
+
+  /* Decrease font size for header and field labels */
+  .container header,
+  .form-outer form .page .title,
+  .form-outer form .page .field .label {
+    font-size: 20px;
+  }
+
+  /* Decrease font size for input fields */
+  .form-outer form .page .field input,
+  .form-outer form .page .field select,
+  .form-outer form .page .field button {
+    font-size: 16px;
+  }
+
+  /* Adjust progress bar margin */
+  .container .progress-bar {
+    margin: 20px 0;
+  }
+
+  /* Decrease font size for progress steps */
+  .container .progress-bar .step p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust container width and padding */
+  .container {
+    width: 95%;
+    padding: 20px 10px 5px 10px;
+  }
+
+  /* Adjust image size */
+  .container img {
+    height: 30%;
+    width: 30%;
+  }
+
+  /* Decrease font size for header and field labels */
+  .container header,
+  .form-outer form .page .title,
+  .form-outer form .page .field .label {
+    font-size: 18px;
+  }
+
+  /* Decrease font size for input fields */
+  .form-outer form .page .field input,
+  .form-outer form .page .field select,
+  .form-outer form .page .field button {
+    font-size: 14px;
+  }
+
+  /* Adjust progress bar margin */
+  .container .progress-bar {
+    margin: 15px 0;
+  }
+
+  /* Decrease font size for progress steps */
+  .container .progress-bar .step p {
+    font-size: 14px;
+  }
+}
+// Make sure all necessary elements are loaded before accessing them
+document.addEventListener("DOMContentLoaded", function() {
+  // Selecting necessary elements
+  const slidePage = document.querySelector(".slide-page");
+  const nextBtnFirst = document.querySelector(".firstNext");
+  const prevBtnSec = document.querySelector(".prev-1");
+  const nextBtnSec = document.querySelector(".next-1");
+  const prevBtnThird = document.querySelector(".prev-2");
+  const nextBtnThird = document.querySelector(".next-2");
+  const prevBtnFourth = document.querySelector(".prev-3");
+  const submitBtn = document.querySelector(".submit");
+  const progressText = document.querySelectorAll(".step p");
+  const progressCheck = document.querySelectorAll(".step .check");
+  const bullet = document.querySelectorAll(".step .bullet");
+  let current = 1;
+
+  // Event listeners for next buttons
+  nextBtnFirst.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (validateStep(current)) {
+          slidePage.style.marginLeft = "-25%";
+          updateProgress(current);
+          current += 1;
+      }
+  });
+
+  nextBtnSec.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (validateStep(current)) {
+          slidePage.style.marginLeft = "-50%";
+          updateProgress(current);
+          current += 1;
+      }
+  });
+
+  nextBtnThird.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (validateStep(current)) {
+          slidePage.style.marginLeft = "-75%";
+          updateProgress(current);
+          current += 1;
+      }
+  });
+
+  submitBtn.addEventListener("click", function() {
+      if (validateStep(current)) {
+          updateProgress(current);
+          current += 1;
+          setTimeout(function() {
+              alert("Your Form Successfully saved");
+              location.reload();
+          }, 800);
+      }
+  });
+
+  // Event listeners for previous buttons
+  prevBtnSec.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "0%";
+      bullet[current - 2].classList.remove("active");
+      progressCheck[current - 2].classList.remove("active");
+      progressText[current - 2].classList.remove("active");
+      current -= 1;
+  });
+
+  prevBtnThird.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "-25%";
+      bullet[current - 2].classList.remove("active");
+      progressCheck[current - 2].classList.remove("active");
+      progressText[current - 2].classList.remove("active");
+      current -= 1;
+  });
+
+  prevBtnFourth.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "-50%";
+      bullet[current - 2].classList.remove("active");
+      progressCheck[current - 2].classList.remove("active");
+      progressText[current - 2].classList.remove("active");
+      current -= 1;
+  });
+
+  // Function to validate the current step
+  function validateStep(step) {
+      const inputs = document.querySelectorAll(`.page:nth-child(${step}) input[required]`);
+      for (const input of inputs) {
+          if (!input.value.trim()) {
+              alert(`Please fill in all required fields in Step ${step}.`);
+              return false;
+          }
+      }
+      return true;
+  }
+
+  // Function to update progress elements
+  function updateProgress(step) {
+      bullet[step - 1].classList.add("active");
+      progressCheck[step - 1].classList.add("active");
+      progressText[step - 1].classList.add("active");
+  }
+});
+
