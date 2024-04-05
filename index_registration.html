@@ -369,55 +369,111 @@ form .page .btns button.next{
      </div>
 
     
-    <script src="../JAVA_GHA/script-register-gha.js"></script>
+    <script>
+        // Make sure all necessary elements are loaded before accessing them
+document.addEventListener("DOMContentLoaded", function() {
+  // Selecting necessary elements
+  const slidePage = document.querySelector(".slide-page");
+  const nextBtnFirst = document.querySelector(".firstNext");
+  const prevBtnSec = document.querySelector(".prev-1");
+  const nextBtnSec = document.querySelector(".next-1");
+  const prevBtnThird = document.querySelector(".prev-2");
+  const nextBtnThird = document.querySelector(".next-2");
+  const prevBtnFourth = document.querySelector(".prev-3");
+  const submitBtn = document.querySelector(".submit");
+  const progressText = document.querySelectorAll(".step p");
+  const progressCheck = document.querySelectorAll(".step .check");
+  const bullet = document.querySelectorAll(".step .bullet");
+  let current = 1;
+
+  // Event listeners for next buttons
+  nextBtnFirst.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (validateStep(current)) {
+          slidePage.style.marginLeft = "-25%";
+          updateProgress(current);
+          current += 1;
+      }
+  });
+
+  nextBtnSec.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (validateStep(current)) {
+          slidePage.style.marginLeft = "-50%";
+          updateProgress(current);
+          current += 1;
+      }
+  });
+
+  nextBtnThird.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (validateStep(current)) {
+          slidePage.style.marginLeft = "-75%";
+          updateProgress(current);
+          current += 1;
+      }
+  });
+
+  submitBtn.addEventListener("click", function() {
+      if (validateStep(current)) {
+          updateProgress(current);
+          current += 1;
+          setTimeout(function() {
+              alert("Your Form Successfully saved");
+              location.reload();
+          }, 800);
+      }
+  });
+
+  // Event listeners for previous buttons
+  prevBtnSec.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "0%";
+      bullet[current - 2].classList.remove("active");
+      progressCheck[current - 2].classList.remove("active");
+      progressText[current - 2].classList.remove("active");
+      current -= 1;
+  });
+
+  prevBtnThird.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "-25%";
+      bullet[current - 2].classList.remove("active");
+      progressCheck[current - 2].classList.remove("active");
+      progressText[current - 2].classList.remove("active");
+      current -= 1;
+  });
+
+  prevBtnFourth.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "-50%";
+      bullet[current - 2].classList.remove("active");
+      progressCheck[current - 2].classList.remove("active");
+      progressText[current - 2].classList.remove("active");
+      current -= 1;
+  });
+
+  // Function to validate the current step
+  function validateStep(step) {
+      const inputs = document.querySelectorAll(`.page:nth-child(${step}) input[required]`);
+      for (const input of inputs) {
+          if (!input.value.trim()) {
+              alert(`Please fill in all required fields in Step ${step}.`);
+              return false;
+          }
+      }
+      return true;
+  }
+
+  // Function to update progress elements
+  function updateProgress(step) {
+      bullet[step - 1].classList.add("active");
+      progressCheck[step - 1].classList.add("active");
+      progressText[step - 1].classList.add("active");
+  }
+});
+
+    </script>
 </body>
-<script>
-   document.addEventListener("DOMContentLoaded", function() {
-            // Selecting necessary elements
-            const slidePage = document.querySelector(".slide-page");
-            const nextBtnFirst = document.querySelector(".firstNext");
-            const prevBtnSec = document.querySelector(".prev-1");
-            const nextBtnSec = document.querySelector(".next-1");
-            const prevBtnThird = document.querySelector(".prev-2");
-            const nextBtnThird = document.querySelector(".next-2");
-            const prevBtnFourth = document.querySelector(".prev-3");
-            const submitBtn = document.querySelector(".submit");
-            const progressText = document.querySelectorAll(".step p");
-            const progressCheck = document.querySelectorAll(".step .check");
-            const bullet = document.querySelectorAll(".step .bullet");
-            let current = 1;
-
-            // Event listeners for next buttons
-            nextBtnFirst.addEventListener("click", function(event) {
-                event.preventDefault();
-                if (validateStep(current)) {
-                    slidePage.style.marginLeft = "-25%";
-                    updateProgress(current);
-                    current += 1;
-                }
-            });
-
-            // Function to validate the current step
-            function validateStep(step) {
-                const inputs = document.querySelectorAll(`.page:nth-child(${step}) input[required]`);
-                for (const input of inputs) {
-                    if (!input.value.trim()) {
-                        alert(`Please fill in all required fields in Step ${step}.`);
-                        return false;
-                    }
-                }
-                return true;
-            }
-
-            // Function to update progress elements
-            function updateProgress(step) {
-                bullet[step - 1].classList.add("active");
-                progressCheck[step - 1].classList.add("active");
-                progressText[step - 1].classList.add("active");
-            }
-        });
-    
-</script>
-
 </html>
   
