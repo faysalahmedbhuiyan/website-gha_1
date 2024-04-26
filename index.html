@@ -392,6 +392,13 @@ footer a {
 </head>
 
 <body>
+  <header>
+    <!-- Language switcher buttons -->
+    <div id="language-switcher">
+        <button onclick="switchToEnglish()">English</button>
+        <button onclick="switchToKorean()">한국어</button>
+    </div>
+</header>
     <main>
         <section>
             <!--backgroun picture-->
@@ -401,7 +408,7 @@ footer a {
 
             <!--GHA header-->
             <div class="bg_text">
-                <h1 style="font-size: 50px;">GLOBAL HAPPY ACADEMY </h1>
+                <h1 style="font-size: 50px;">GLOBAL HAPPY ACADEMY</h1>
                 <span>
                     <h2> Center for Happy Education</h2><br>
                     <h2>positive psychology and wel-bing</h2>
@@ -663,6 +670,15 @@ footer a {
     </footer>
     <!--javascript-->
     <script>
+        // Function to switch to English version
+        function switchToEnglish() {
+            window.location.href = "index.html";
+        }
+
+        // Function to switch to Korean version
+        function switchToKorean() {
+            window.location.href = "index_kr.html";
+        }
         document.addEventListener("DOMContentLoaded", function() {
           var acc = document.getElementsByClassName("accordion");
           var i;
@@ -801,4 +817,3 @@ document.addEventListener("DOMContentLoaded", function() {
 </body>
 
 </html>
-
